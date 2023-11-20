@@ -192,6 +192,9 @@ h2 {
 	font-weight: bold;
 	margin: -1em 0.65em 1em;
 }
+a {
+	text-decoration: none;
+}
 
 .final-score-lbl {
 	font-size: 5rem;
@@ -225,6 +228,7 @@ button::before {
 	position: absolute;
 	top: 0;
 	right: 0;
+	cursor: pointer;
 	bottom: 0;
 	left: 0;
 	background-color: rgba(255, 255, 255, 0.15);

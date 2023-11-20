@@ -15,7 +15,7 @@ const getSpawnDelay = () => {
 	const spawnDelay = spawnDelayMax - state.game.cubeCount * 3.1;
 	return Math.max(spawnDelay, spawnDelayMin);
 }
-const doubleStrongEnableScore = 2000;
+const doubleStrongEnableScore = 1000;
 // Number of cubes that must be smashed before activating a feature.
 const slowmoThreshold = 20;
 const strongThreshold = 30;
@@ -47,7 +47,7 @@ const touchTrailThickness = 7;
 const touchPointLife = 120;
 const touchPoints = [];
 // Size of in-game targets. This affects rendered size and hit area.
-const targetRadius = 40;
+const targetRadius = 50;
 const targetHitRadius = 50;
 const makeTargetGlueColor = target => {
 	// const alpha = (target.health - 1) / (target.maxHealth - 1);
@@ -93,7 +93,7 @@ const allShadowPolys = [];
 // Game Modes
 const GAME_MODE_RANKED = Symbol('GAME_MODE_RANKED');
 const GAME_MODE_CASUAL = Symbol('GAME_MODE_CASUAL');
-const GAME_MODE_MULTIPLAYER = Symbol('GAME_MODE_MULTIPLAYER');
+//const GAME_MODE_MULTIPLAYER = Symbol('GAME_MODE_MULTIPLAYER');
 // Available Menus
 const MENU_MAIN = Symbol('MENU_MAIN');
 const MENU_PAUSE = Symbol('MENU_PAUSE');
@@ -1339,11 +1339,7 @@ handleClick($('.play-casual-btn'), () => {
 	resetGame();
 });
 
-handleClick($('.play-multiplayer-btn'), () => {
-	setGameMode(GAME_MODE_CASUAL);
-	setActiveMenu(null);
-	resetGame();
-});
+
 
 // Pause Menu
 handleClick($('.resume-btn'), () => resumeGame());
@@ -2195,3 +2191,7 @@ if ('PointerEvent' in window) {
 
 
 setupCanvases();
+
+
+// Full Screen 
+
